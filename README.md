@@ -42,4 +42,14 @@ Some features are remove as they consist of unique identifiers or are irrelevant
 The following color channels are also removed, as they are highly correlated with each other and another channel:
 `r`, `i`, `z`
 
+## Training and optiizing the model
 
+The algorithm chosen for the classification task is XGBoost Classifier.
+Optimization is acheived with a grid search and the parameters of the best performing model are:
+`{'gamma': 1,
+ 'learning_rate': 0.05,
+ 'max_depth': 6,
+ 'min_child_weight': 1,
+ 'n_estimators': 100}`
+
+After optimization the scores for the train and test set are, respectively 0.998 and 0.99.
